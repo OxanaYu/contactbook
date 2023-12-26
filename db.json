@@ -1,0 +1,16 @@
+{
+  "product": [
+    {
+      "nameOfCont": "normalName",
+      "lName": "norm Last Name",
+      "phone": "ghmgm",
+      "img": "https://i.ebayimg.com/images/g/mrQAAOSww5Rj9PFp/s-l1200.webp",
+      "id": 1,
+      "card": "normal name",
+      "name": "NormalName",
+      "lastName": "ghjghm",
+      "pnoneNum": "ghmgm",
+      "contPhoto": "https://i.ebayimg.com/images/g/mrQAAOSww5Rj9PFp/s-l1200.webp"
+    }
+  ]
+}
