@@ -8,31 +8,34 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="container">
-        <nav>
-          <p>Local storage</p>
-          <p>Something else</p>
-          <button class="contacts_btn">Contacts</button>
-        </nav>
+      <nav>
+        <p>Local storage</p>
+        <p>Contact Book</p>
+        <button class="contacts_btn">Contacts</button>
+      </nav>
 
+      <div class="mod-window_container">
         <div class="modWindow">
-          <input class="inp_Name" type="text" />
-          <input class="inp_lastName" type="text" />
-          <input class="inp_telephone" type="text" />
-          <input class="inp_photo" type="text" />
+          <input placeholder="Enter name" class="inp_Name" type="text" />
+          <input
+            placeholder="Enter last name"
+            class="inp_lastName"
+            type="text"
+          />
+          <input
+            placeholder="Enter phone number"
+            class="inp_telephone"
+            type="number"
+          />
+          <input
+            placeholder="insert picture url"
+            class="inp_photo"
+            type="text"
+          />
           <button class="addContact">Add Contact</button>
         </div>
 
         <div class="card"></div>
-        <!-- <div class="auth-form">
-          <div class="field">
-            <span>Task: </span>
-            <input class="task-input" type="text" />
-          </div>
-          <div class="field">
-            <button class="btn">Add task</button>
-          </div>
-        </div> -->
       </div>
       <div class="container">
         <ul class="task-list"></ul>
