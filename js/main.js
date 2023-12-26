@@ -3,7 +3,7 @@ const API = "http://localhost:8000/product";
 let contactsBtn = document.querySelector(".contacts_btn");
 let modalWindow = document.querySelector(".modWindow");
 contactsBtn.addEventListener("click", () => {
-  modalWindow.style.display = "block";
+  modalWindow.style.display = "flex";
 });
 
 // ! CREATE
@@ -15,6 +15,7 @@ let image = document.querySelector(".inp_photo");
 let addContactBtn = document.querySelector(".addContact");
 let contactCard = document.querySelector(".card");
 let list = document.querySelector(".task-list");
+let container = document.querySelector(".container");
 
 addContactBtn.addEventListener("click", () => {
   if (
@@ -58,18 +59,25 @@ function readTask() {
       return res.json();
     })
     .then((data) => {
-      contactCard.innerHTML = "";
+      container.innerHTML = "";
       data.forEach((elem) => {
         console.log(elem);
-        list.innerHTML = "";
-        contactCard.innerHTML += `
-        <h5>${elem.nameOfCont}</h5>
-        <h5>${elem.lName}</h5>
-        <h5>${elem.phone}</h5>
-        <img class=".card_img" src="${elem.img}" alt="" />
+        // list.innerHTML = "";
+        container.innerHTML += `
+        <div class="card" >
+          <div class="card-desc">
+            <h4>${elem.nameOfCont}</h4>
+            <p>${elem.lName}</p>
+            <p>${elem.phone}</p>
+          </div>
+      <div class="card_image">
+        <img class=".card_img" src="${elem.img}" alt="">
+      </div>
+      <div class="card_action_buttons">
         <button id=${elem.id} class="btnDelete">delete</button>
-        <button id=${elem.id} class="btnEdit">edit</button>`;
-        contactCard.style.border = "1px solid black";
+        <button id=${elem.id} class="btnEdit">edit</button>
+      </div>
+      </div>`;
       });
     });
 }
@@ -91,9 +99,6 @@ document.addEventListener("click", (e) => {
     }).then(() => readTask());
   }
 });
-
-// deleteBtn.style.display = "none";
-// editBtn.style.display = "none";
 
 //редактируем карточку
 let inpEdit = document.querySelector(".inpEdit");

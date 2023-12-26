@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: rgb(194, 183, 124);
 }
 .container {
   width: 100%;
@@ -44,6 +45,12 @@ body {
 }
 
 .editModal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100px;
+  padding: 5px;
+
   display: none;
 }
 
@@ -63,36 +70,9 @@ p {
 }
 
 .modWindow {
-  display: none;
-}
-
-.card {
-  max-width: 300px;
-  margin: 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* border: 1px solid black; */
-
-  /* width: 400px; */
-
-  overflow: hidden;
-  box-sizing: border-box;
-  margin: auto;
-  text-align: center;
-}
-.card_img {
-  max-width: 100%;
-  box-sizing: border-box;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.btnDelete {
-  margin-top: 20px;
+  justify-content: space-around;
+  display: none;
 }
 
 .mod-window_container {
@@ -103,17 +83,81 @@ p {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 40%;
-  height: 30%;g
+  height: 30%;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 300px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 10px;
 }
 
 .btnEdit {
-  width: 100%;
-  height: 20px;
+  background-color: #04aa6d;
+  border: none;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  transition-duration: 0.4s;
+  margin: 16px 0 !important;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .btnDelete {
-  width: 100%;
-  height: 20px;
+  background-color: #f44336;
+  border: none;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  transition-duration: 0.4s;
+  margin: 16px 0 !important;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btnDelete:hover {
+  transform: scale(1.03);
+}
+
+.btnEdit:hover {
+  transform: scale(1.03);
+}
+
+.card-desc {
+  text-align: center;
+}
+
+.card_image {
+  display: flex;
+  justify-content: center;
+}
+
+.card_image img {
+  width: 250px;
+}
+
+.card_action_buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.wrapper_editModal {
+  display: flex;
+  justify-content: center;
 }
